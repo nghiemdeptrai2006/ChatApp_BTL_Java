@@ -1,0 +1,391 @@
+/* --- Khởi tạo cơ bản --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #0068ff; /* Màu xanh Zalo/Messenger */
+    --primary-hover: #0054cc;
+    --bg-color: #f2f4f5;
+    --text-main: #050505;
+    --text-muted: #65676b;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* --- Header & Thanh tiện ích --- */
+.navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Khu vực chính (Hero Section) --- */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 70px; /* Bù khoảng trống của fixed header */
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hiệu ứng nền (Blobs) */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.blob-1 {
+    width: 400px;
+    height: 400px;
+    background: #0068ff40;
+    top: -100px;
+    left: -100px;
+    animation: moveBlob 10s infinite alternate;
+}
+
+.blob-2 {
+    width: 300px;
+    height: 300px;
+    background: #00d2ff30;
+    bottom: -50px;
+    right: 10%;
+    animation: moveBlob 12s infinite alternate-reverse;
+}
+
+@keyframes moveBlob {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 50px) scale(1.1); }
+}
+
+/* Bố cục chia 2 cột */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 0 20px;
+}
+
+/* --- Cột Trái: Chữ và Bong bóng Chat --- */
+.intro-area h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    background: linear-gradient(45deg, var(--primary-color), #00d2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+.intro-area p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 450px;
+}
+
+.floating-chats {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+}
+
+.chat-bubble {
+    padding: 12px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: fit-content;
+    position: relative;
+}
+
+.chat-bubble.left {
+    background-color: var(--white);
+    color: var(--text-main);
+    border-bottom-left-radius: 4px;
+    align-self: flex-start;
+}
+
+.chat-bubble.right {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-bottom-right-radius: 4px;
+    align-self: flex-end;
+}
+
+/* Animation cho bong bóng chat */
+.animate-float-1 { animation: float 6s ease-in-out infinite; }
+.animate-float-2 { animation: float 7s ease-in-out infinite 1s; }
+.animate-float-3 { animation: float 5s ease-in-out infinite 2s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* --- Cột Phải: Form Đăng Nhập --- */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-box h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.login-box .subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Đoạn code mới thêm vào */
+.logo-icon img {
+    height: 40px; 
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 104, 255, 0.1);
+}
+
+.input-group label {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 15px;
+    transition: 0.2s ease all;
+    pointer-events: none;
+    background: var(--white);
+    padding: 0 4px;
+}
+
+/* Hiệu ứng nhãn nổi lên (Floating label) */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+    top: 0;
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.forgot-pass {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: var(--primary-hover);
+}
+
+.divider {
+    text-align: center;
+    margin: 25px 0;
+    position: relative;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #eee;
+    z-index: 1;
+}
+
+.divider span {
+    background: var(--white);
+    padding: 0 15px;
+    color: var(--text-muted);
+    font-size: 13px;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-qr {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--white);
+    color: var(--text-main);
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-qr:hover {
+    background-color: #f8f9fa;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.register-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- Responsive cho màn hình điện thoại --- */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .nav-links {
+        display: none; /* Ẩn menu trên mobile để gọn gàng */
+    }
+    
+    .intro-area {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+    
+    .intro-area h1 { font-size: 32px; }
+}

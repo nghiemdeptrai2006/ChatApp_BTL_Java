@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký - Ứng dụng Chat</title>
+    <link rel="stylesheet" href="./dangki.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <div class="logo-placeholder">
+                    <span class="logo-icon"><img src="../images/logo.png" alt="Logo"></span>
+                    <span class="logo-text">ChatApp</span>
+                </div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#">Tính năng</a></li>
+                <li><a href="#">Tải ứng dụng</a></li>
+                <li><a href="#">Quyền riêng tư</a></li>
+                <li><a href="#">Trung tâm hỗ trợ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+
+        <div class="container">
+            <div class="intro-area">
+                <h1>Tham gia cùng hàng triệu<br>người dùng khác</h1>
+                <p>Tạo tài khoản ChatApp ngay hôm nay để trải nghiệm nhắn tin miễn phí, gọi video sắc nét và chia sẻ khoảnh khắc với những người thân yêu.</p>
+                
+                <div class="floating-chats">
+                    <div class="chat-bubble left animate-float-1">Chào người mới! Cùng trò chuyện nhé</div>
+                    <div class="chat-bubble right animate-float-2">Kết nối nhanh chóng, bảo mật tuyệt đối </div>
+                    <div class="chat-bubble left animate-float-3">Giao diện dep tien ich rat de su dung</div>
+                </div>
+            </div>
+
+            <div class="login-wrapper">
+                <div class="register-box">
+                    <h2>Tạo Tài Khoản</h2>
+                    <p class="subtitle">Điền thông tin của bạn để bắt đầu</p>
+                    
+                    <form action="#" method="POST">
+                        <div class="input-group">
+                            <input type="text" id="fullname" placeholder=" " required>
+                            <label for="fullname">Họ và tên</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" id="contact" placeholder=" " required>
+                            <label for="contact">Số điện thoại hoặc Email</label>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="password" id="password" placeholder=" " required>
+                            <label for="password">Mật khẩu mới</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" id="confirm-password" placeholder=" " required>
+                            <label for="confirm-password">Xác nhận mật khẩu</label>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="terms">
+                                <input type="checkbox" required> Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-login">Đăng ký ngay</button>
+                    </form>
+                    
+                    <p class="register-link">Đã có tài khoản? <a href="dangnhap.html">Đăng nhập tại đây</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

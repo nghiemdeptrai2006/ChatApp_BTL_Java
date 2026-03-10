@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò chuyện - ChatApp</title>
+    <link rel="stylesheet" href="./chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="user-profile">
+                    <div class="avatar-wrapper">
+                        <img src="https://ui-avatars.com/api/?name=Admin&background=0068ff&color=fff" alt="My Avatar" class="avatar">
+                        <span class="status-dot online"></span>
+                    </div>
+                    <span class="user-name">Tài khoản của tôi</span>
+                </div>
+                <div class="sidebar-actions">
+                    <i class="fas fa-edit" title="Tin nhắn mới"></i>
+                    <i class="fas fa-cog" title="Cài đặt"></i>
+                </div>
+            </div>
+            
+            <div class="search-bar">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Tìm kiếm trên ChatApp...">
+                </div>
+            </div>
+            
+            <div class="contact-list" id="contact-list">
+                <div class="contact-item active">
+                    <div class="avatar-wrapper">
+                        <img src="https://ui-avatars.com/api/?name=Nguyen+A&background=random" alt="Avatar" class="avatar">
+                        <span class="status-dot online"></span>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-top">
+                            <h4>Nguyễn Văn A</h4>
+                            <span class="time">10:30</span>
+                        </div>
+                        <p class="preview-msg unread">Thiết kế này nhìn xịn quá bạn ơi!</p>
+                    </div>
+                    <div class="unread-badge">2</div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="avatar-wrapper">
+                        <img src="https://ui-avatars.com/api/?name=Tran+B&background=random" alt="Avatar" class="avatar">
+                        <span class="status-dot offline"></span>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-top">
+                            <h4>Trần Thị B</h4>
+                            <span class="time">Hôm qua</span>
+                        </div>
+                        <p class="preview-msg">Dự án Java đến đâu rồi?</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="chat-area">
+            <header class="chat-header">
+                <div class="chat-user-info">
+                    <i class="fas fa-chevron-left back-btn" id="back-btn"></i>
+                    <div class="avatar-wrapper">
+                        <img src="https://ui-avatars.com/api/?name=Nguyen+A&background=random" alt="Avatar" class="avatar">
+                        <span class="status-dot online"></span>
+                    </div>
+                    <div class="info-text">
+                        <h3>Nguyễn Văn A</h3>
+                        <span class="status">Đang hoạt động</span>
+                    </div>
+                </div>
+                <div class="chat-header-actions">
+                    <div class="icon-btn"><i class="fas fa-phone"></i></div>
+                    <div class="icon-btn"><i class="fas fa-video"></i></div>
+                    <div class="icon-btn"><i class="fas fa-info-circle"></i></div>
+                </div>
+            </header>
+            
+            <div class="chat-messages" id="chat-messages">
+                <div class="message-date"><span>Hôm nay</span></div>
+                
+                <div class="message received">
+                    <img src="https://ui-avatars.com/api/?name=Nguyen+A&background=random" alt="Avatar" class="avatar-small">
+                    <div class="message-content-wrapper">
+                        <div class="message-content">Chào bạn, mình vừa xem qua bản thiết kế lúc nãy.</div>
+                        <span class="msg-time">10:28</span>
+                    </div>
+                </div>
+
+                <div class="message received">
+                    <img src="https://ui-avatars.com/api/?name=Nguyen+A&background=random" alt="Avatar" class="avatar-small" style="visibility: hidden;">
+                    <div class="message-content-wrapper">
+                        <div class="message-content">Thiết kế này nhìn xịn quá bạn ơi!</div>
+                        <span class="msg-time">10:30</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="input-actions">
+                    <i class="fas fa-plus-circle action-icon" title="Thêm file"></i>
+                    <i class="far fa-image action-icon" title="Gửi ảnh"></i>
+                    <i class="far fa-smile action-icon" title="Nhãn dán"></i>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="message-input" placeholder="Aa" autocomplete="off">
+                    <button id="send-btn" class="send-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./chat.js"></script>
+</body>
+</html>

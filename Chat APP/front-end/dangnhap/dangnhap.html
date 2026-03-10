@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Ứng dụng Chat</title>
+    <link rel="stylesheet" href="./dangnhap.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <div class="logo-placeholder">
+                    <span class="logo-icon"><img src="../images/logo.png"></span>
+                    <span class="logo-text">ChatApp</span>
+                </div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#">Tính năng</a></li>
+                <li><a href="#">Tải ứng dụng</a></li>
+                <li><a href="#">Quyền riêng tư</a></li>
+                <li><a href="#">Trung tâm hỗ trợ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+
+        <div class="container">
+            <div class="intro-area">
+                <h1>Trò chuyện liền mạch,<br>Kết nối yêu thương</h1>
+                <p>Nền tảng nhắn tin nhanh chóng, bảo mật và hoàn toàn miễn phí. Đăng nhập để bắt đầu kết nối với mọi người.</p>
+                
+                <div class="floating-chats">
+                    <div class="chat-bubble left animate-float-1">Chao mung ban den voi ung dung chat</div>
+                    <div class="chat-bubble right animate-float-2">Chuc ban co mot trai nghiem su dung ung dung tot</div>
+                    <div class="chat-bubble left animate-float-3">Cam on ban rat nhieu</div>
+                </div>
+            </div>
+
+            <div class="login-wrapper">
+                <div class="login-box">
+                    <h2>Đăng Nhập</h2>
+                    <p class="subtitle">Chào mừng bạn quay trở lại!</p>
+                    
+                    <form action="#" method="POST">
+                        <div class="input-group">
+                            <input type="text" id="username" placeholder=" " required>
+                            <label for="username">Số điện thoại hoặc Email</label>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="password" id="password" placeholder=" " required>
+                            <label for="password">Mật khẩu</label>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox"> Ghi nhớ đăng nhập
+                            </label>
+                            <a href="#" class="forgot-pass">Quên mật khẩu?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn-login">Đăng nhập</button>
+                    </form>
+                    
+                    <div class="divider"><span>hoặc</span></div>
+                    
+                    <button class="btn-qr">Đăng nhập bằng mã QR</button>
+                    
+                    <p class="register-link">Chưa có tài khoản? <a href="../dangki/dangki.html">Đăng ký ngay</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
